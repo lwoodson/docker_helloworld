@@ -1,4 +1,4 @@
 helloworld:
-  build: .
+  build: helloworld
   ports:
-    - 8001:8000
+    - 8000:8000
