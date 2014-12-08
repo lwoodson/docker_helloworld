@@ -9,5 +9,7 @@ RUN unzip serf.zip
 RUN mv serf /usr/bin/serf
 RUN rm serf.zip
 
+ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+
 # Run haproxy
 CMD ["bash", "/haproxy-start"]

@@ -2,9 +2,14 @@ loadbalancer:
   build: loadbalancer
   ports:
     - 8000:80
-  volumes:
-    - /home/lance/projects/lab/docker3:/haproxy-override
-helloworld:
+  links:
+    - helloworld01
+    - helloworld02
+helloworld01:
   build: helloworld
   ports:
     - 8001:8000
+helloworld02:
+  build: helloworld
+  ports:
+    - 8002:8000
